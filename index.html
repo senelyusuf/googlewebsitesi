@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Yeni Sekme</title>
+    <style>
+        body { 
+ background: #FFFFFF; 
+ margin: 0;
+}
+#backgroundImage {
+  border: none;
+  height:100%;
+  pointer-events: none;
+  position: fixed;
+  top:0;
+  visibility:hidden;
+  width:100%;
+}
+[show-background-image] #backgroundImage { visibility: visible;}
+    </style>
+</head>
+
+<body>
+    <div class="panel">
+        <nav class="header-panel">
+            <ul class="header">
+                <li class="pic headerli">
+                    <a aria-label="Google Hesabı:yusuf şenel (ysenel60@gmail.com" href="https://accounts.google.com/SignOutOptions?hl=tr&continue=https://www.google.com%3Fhl%3Dtr" target="_blank"><img class="profile-pic"
+                            src="img/ysenelprofil.png" alt="" style="margin-right: 1px;" /></a>
+                          
+                </li>
+                <li style="margin: 8px" class="headerli">
+                    <a href="https://www.google.com.tr/intl/en/about/products?tab=wh"><img src="appsbutton.svg" alt=""
+                            style="width: 16px; height: 16px; margin-right: 3px;"></a>
+                </li>
+                <li style="margin: 8px; margin-left: -2px;" class="headerli">
+                    <a href="https://www.google.com.tr/imghp?hl=en&tab=wi&authuser=0&ogbl">Images</a>
+                </li>
+                <li style="margin: 8px" class="headerli">
+                    <a href="https://mail.google.com/mail/?tab=wm&authuser=0&ogbl">Gmail</a>
+                </li>
+            </ul>
+        </nav>
+        <div class="container">
+            <img src="img/logo.png" width="272px" alt="" />
+        </div>
+        <!-- <div class="search-area"> -->
+            <!-- <div class="search"> -->
+                <!-- <div class="search-img"> -->
+                    <!-- <span> -->
+                        <!-- <svg focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"> -->
+                            <!-- <path -->
+                                <!-- d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"> -->
+                            <!-- </path> -->
+                        <!-- </svg> -->
+                    <!-- </span> -->
+                <!-- </div> -->
+                <!-- <div class="input-enter"> -->
+                    <!-- <div class="input-area"> -->
+                        <!-- <input type="fakebox-input" class="input" aria-hidden="true" value="Google'da arama yapın" autocomplete="off" tabindex="-1"   maxlength="2048" autofocus="true"/> -->
+                    <!-- </div> -->
+                <!-- </div> -->
+            <!-- </div> -->
+            <!-- <div class="voice-con"> -->
+                <!-- <img class="voice" src="img/voicelogo.png" alt=""> -->
+            <!-- </div> -->
+        <!-- </div> -->
+        <div id="fakebox-container">
+            <div id="fakebox">
+                <div id="fakebox-search-icon"></div>
+                <div id="fakebox-text">Google'da arama yapın veya bir URL yazın</div>
+                <input id="fakebox-input" autocomplete="off" tabindex="-1" type="url" aria-hidden="true">
+                <div id="fakebox-cursor"></div>
+                <button id="fakebox-microphone" title="Sese göre ara"></button>
+
+            </div>
+        </div>
+        <!-- <cr-most-visited id="mostVisited" visible_="" custom-links-enabled_=""></cr-most-visited>  <div id="container" style="--tile-background-color:rgba(241, 243, 244, 1 ) column-count: 3;" >
+        <a class="tile" aria-label="Youtube" title="Youtube" href="https://www.youtube.com/">
+            <div class="tile-icon">
+                <img drggable="false" src="chrome://favicon2/?size=24&scale_factor=1x&show_fallback_monogram=&page_url=https%3A%2F%2Fyoutube.com%2F" alt="">
+                    <div class="query-tile-icon" draggable="false" hidden></div>
+            </div>
+            <div class="tile-title title-ltr">
+                <span>Youtube</span>
+
+            </div>
+        </a>
+    <a class="tile" aria-label="Gmail" title="Gmail" href="https://accounts.google.com/b/0/AddMailService">
+            <div class="tile-icon">
+                <img drggable="false" src="chrome://favicon2/?size=24&scale_factor=1x&show_fallback_monogram=&page_url=https%3A%2F%2Faccounts.google.com%2Fb%2F0%2FAddMailService" alt="">
+                    <div class="query-tile-icon" draggable="false" hidden></div>
+            </div>
+            <div class="tile-title title-ltr">
+                <span>Gmail</span>
+
+
+        </a>
+        <a class="tile" aria-label="Google" title="Google" href="https://www.google.com/">
+            <div class="tile-icon">
+                <img drggable="false" src="chrome://favicon2/?size=24&scale_factor=1x&show_fallback_monogram=&page_url=http%3A%2F%2Fwww.google.com%2F" alt="">
+                    <div class="query-tile-icon" draggable="false" hidden></div>
+            </div>
+            <div class="tile-title title-ltr">
+                <span>Google</span>
+        </a>
+        <a class="tile" aria-label="Web Mağazası" title="Web Mağazası" href="https://chrome.google.com/webstore?hl=tr">
+            <div class="tile-icon">
+                <img drggable="false" src="chrome://favicon2/?size=24&scale_factor=1x&show_fallback_monogram=&page_url=https%3A%2F%2Fchrome.google.com%2Fwebstore%3Fhl%3Dtr" alt="">
+                    <div class="query-tile-icon" draggable="false" hidden></div>
+            </div>
+            <div class="tile-title title-ltr">
+                <span>Web Mağazası</span>
+        </a>
+
+            </div>-->
+       
+              
+    </div>
+    <div class="box">
+        <center>
+            <nav>
+                <input type="button" class="button-1" value="Google'da ara">
+                <input type="button" class="button-2" value="Kendimi şanslı hissediyorum">
+    
+            </nav>
+
+        </center>
+        
+    </div>
+        <div class="bosluk-1 bosluk-2">
+
+        </div>
+    <div class="alt-1 alt-2">
+        <div class="Turkey">Türkiye</div>
+    </div>
+    <div class="alt-3">
+        <a class="karbon" href="https://www.google.com.tr/url?sa=t&rct=j&q=&esrc=s&source=webhp&cd=&cad=rja&uact=8&ved=0ahUKEwjVv9aJjf35AhWbSvEDHXQ2CXsQiM8HCBI&url=https%3A%2F%2Fsustainability.google%2Fintl%2Ftr%2Fcarbon-free%2F%3Futm_source%3Dgooglehpfooter%26utm_medium%3Dhousepromos%26utm_campaign%3Dbottom-footer%26utm_content%3D&usg=AOvVaw0_jOOOf9TyTFc0fYjvOS2a"> <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABUAAAAYCAMAAAAiV0Z6AAAAPFBMVEVLoEN0wU6CzFKCzFKCzFKCzFKCzFJSo0MSczNDmkCCzFJPoUMTczNdr0gmgziCzFITczMTczMTczMTczPh00jOAAAAFHRSTlPF/+bIsms8Ad///hX+//5/tXw7aMEAx10AAACaSURBVHgBbc4HDoRQCATQ33tbvf9dF9QxaCT9UQaltLHOh/golXKhMs5Xqa0xU1lyoa2fXFyQOsDG38qsLy4TaV+sFislovyhPzLJJrBu6eQOtpW0LjbJkzTuTDLRVNKa3uxJI+VdiRqXSeu6GW+Qxi29eLIi8H7EsYrT42BD+mQtNO5JMjRuC4lSY8V4hsLX0egGijvUSEP9AbylEsOkeCgWAAAAAElFTkSuQmCC" alt="">
+        <span>2007'den bu yana karbon nötr</span>
+        </a>
+        <div class="alt-sekme-1 alt-sekme-2"></div>
+        <a class="hakkinda" href="https://www.google.com.tr/url?sa=t&rct=j&q=&esrc=s&source=webhp&cd=&cad=rja&uact=8&ved=0ahUKEwjVv9aJjf35AhWbSvEDHXQ2CXsQkNQCCA8&url=https%3A%2F%2Fabout.google%2F%3Futm_source%3Dgoogle-TR%26utm_medium%3Dreferral%26utm_campaign%3Dhp-footer%26fg%3D1&usg=AOvVaw2wCW9oJzvsNy5TI40Vv7gd">Hakkında</a>
+        <a class="hakkinda" href="https://www.google.com.tr/intl/tr_tr/ads/?subid=ww-ww-et-g-awa-a-g_hpafoot1_1!o2&utm_source=google.com&utm_medium=referral&utm_campaign=google_hpafooter&fg=1">Reklam</a>
+        <a class="hakkinda" href="https://www.google.com.tr/url?sa=t&rct=j&q=&esrc=s&source=webhp&cd=&cad=rja&uact=8&ved=0ahUKEwjVv9aJjf35AhWbSvEDHXQ2CXsQktQCCBE&url=https%3A%2F%2Fwww.google.com.tr%2Fservices%2F%3Fsubid%3Dww-ww-et-g-awa-a-g_hpbfoot1_1!o2%26utm_source%3Dgoogle.com%26utm_medium%3Dreferral%26utm_campaign%3Dgoogle_hpbfooter%26fg%3D1&usg=AOvVaw1gD8cm8yvLZsYHeaHMyrQ1">İşletme</a>
+        <a class="hakkinda" href="https://google.com/search/howsearchworks/?fg=1">Arama nasıl çalışır</a>
+        <a class="alt-sag" href="">Ayarlar</a>
+        <a class="alt-sag" href="https://www.google.com.tr/url?sa=t&rct=j&q=&esrc=s&source=webhp&cd=&cad=rja&uact=8&ved=0ahUKEwjVv9aJjf35AhWbSvEDHXQ2CXsQ8qwCCBQ&url=https%3A%2F%2Fpolicies.google.com%2Fterms%3Fhl%3Dtr%26fg%3D1&usg=AOvVaw09fxVS5Ma_dtPpFbwSJJI9">Şartlar</a>
+
+
+        <a class="alt-sag" href="https://www.google.com.tr/url?sa=t&rct=j&q=&esrc=s&source=webhp&cd=&cad=rja&uact=8&ved=0ahUKEwjVv9aJjf35AhWbSvEDHXQ2CXsQ8awCCBM&url=https%3A%2F%2Fpolicies.google.com%2Fprivacy%3Fhl%3Dtr%26fg%3D1&usg=AOvVaw3Mz656A9hCtcj54KCn45ar">Gizlilik</a>
+
+    </div>
+    
+
+
+
+    <!-- <nav> 
+        <div class="color-grey">
+            <ul class="footer">
+                <li class="footerli">
+                    <a
+                        href="https://www.google.com/intl/en_tr/ads/?subid=ww-ww-et-g-awa-a-g_hpafoot1_1!o2&utm_source=google.com&utm_medium=referral&utm_campaign=google_hpafooter&fg=1">Advertising</a>
+                </li>
+                <li class="footerli">
+                    <a
+                        href="https://www.google.com/services/?subid=ww-ww-et-g-awa-a-g_hpbfoot1_1!o2&utm_source=google.com&utm_medium=referral&utm_campaign=google_hpbfooter&fg=1">Business</a>
+                </li>
+                <li class="footerli">
+                    <a
+                        href="https://about.google/?utm_source=google-TR&utm_medium=referral&utm_campaign=hp-footer&fg=1">About</a>
+                </li>
+                <li class="footerli">
+                    <a href="https://google.com/search/howsearchworks/?fg=1">How Search works</a>
+                </li>
+                <li class="footerli" style="float: right; margin-right: 35px">
+                    <a href="https://www.google.com/preferences?hl=en">Settings</a>
+                </li>
+                <li class="footerli" style="float: right">
+                    <a href="https://policies.google.com/terms?hl=en-TR&fg=1">Terms</a>
+                </li>
+                <li class="footerli" style="float: right">
+                    <a href="https://policies.google.com/privacy?hl=en-TR&fg=1">Privacy</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    -->
+        
+
+</body>
+
+</html>
